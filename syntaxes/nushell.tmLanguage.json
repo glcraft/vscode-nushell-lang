@@ -332,7 +332,7 @@
         "module": {
             "begin": "(module)\\s+([\\w\\-]+)\\s*\\{",
             "beginCaptures": {
-                "1": { "name": "entity.name.function.nushell" },
+                "1": { "name": "keyword.other.nushell" },
                 "2": { "name": "entity.name.namespace.nushell" }
             },
             "end": "\\}",
@@ -349,15 +349,15 @@
                 {
                     "match": "^\\s*((?:export )?use)\\s+([\\w\\-]+|\"[\\w\\- ]+\"|'[\\w\\- ]+')(?:\\s+([\\w\\-]+|\"[\\w\\- ]+\"|'[\\w\\- ]+'|\\*))?\\s*;?$",
                     "captures": {
-                        "1": { "name": "entity.name.function.nushell" },
+                        "1": { "name": "keyword.other.nushell" },
                         "2": { "name": "entity.name.namespace.nushell" },
-                        "3": { "name": "keyword.other.nushell" }
+                        "3": { "name": "entity.name.function.nushell" }
                     }
                 },
                 {
                     "begin": "^\\s*((?:export )?use)\\s+([\\w\\-]+|\"[\\w\\- ]+\"|'[\\w\\- ]+')\\s*\\[",
                     "beginCaptures": {
-                        "1": { "name": "entity.name.function.nushell" },
+                        "1": { "name": "keyword.other.nushell" },
                         "2": { "name": "entity.name.namespace.nushell" }
                     },
                     "end": "(\\])\\s*;?\\s*$",
@@ -368,7 +368,7 @@
                         {
                             "match" : "([\\w\\-]+|\"[\\w\\- ]+\"|'[\\w\\- ]+'|\\*),?",
                             "captures": {
-                                "1": { "name": "keyword.other.nushell" }
+                                "1": { "name": "entity.name.function.nushell" }
                             }
                         },
                         {
@@ -379,7 +379,7 @@
                 {
                     "match": "(?<path>(?:/|\\\\|~[\\/\\\\]|\\.\\.?[\\/\\\\])?(?:[^\\/\\\\]+[\\/\\\\])*[\\w\\- ]+(?:\\.nu)?){0}^\\s*((?:export )?use)\\s+(\"\\g<path>\"|'\\g<path>\\'|(?![\"'])\\g<path>)(?:\\s+([\\w\\-]+|\"[\\w\\- ]+\"|'[^']+'|\\*))?\\s*;?$",
                     "captures": {
-                        "2": { "name": "entity.name.function.nushell" },
+                        "2": { "name": "keyword.other.nushell" },
                         "3": { 
                             "name": "string.bare.nushell",
                             "patterns": [
@@ -391,13 +391,13 @@
                                 }
                             ]
                         },
-                        "4": { "name": "keyword.other.nushell" }
+                        "4": { "name": "entity.name.function.nushell" }
                     }
                 },
                 {
                     "begin": "(?<path>(?:/|\\\\|~[\\/\\\\]|\\.\\.?[\\/\\\\])?(?:[^\\/\\\\]+[\\/\\\\])*[\\w\\- ]+(?:\\.nu)?){0}^\\s*((?:export )?use)\\s+(\"\\g<path>\"|'\\g<path>\\'|(?![\"'])\\g<path>)\\s+\\[",
                     "beginCaptures": {
-                        "2": { "name": "entity.name.function.nushell" },
+                        "2": { "name": "keyword.other.nushell" },
                         "3": { 
                             "name": "string.bare.nushell",
                             "patterns": [
@@ -418,7 +418,7 @@
                         {
                             "match" : "([\\w\\-]+|\"[\\w\\- ]+\"|'[\\w\\- ]+'|\\*),?",
                             "captures": {
-                                "0": { "name": "keyword.other.nushell" }
+                                "0": { "name": "entity.name.function.nushell" }
                             }
                         },
                         {
@@ -429,7 +429,7 @@
                 {
                     "match": "^\\s*(?:export )?use",
                     "captures": {
-                        "0": { "name": "entity.name.function.nushell" }
+                        "0": { "name": "keyword.other.nushell" }
                     }
                 }
             ]
@@ -521,8 +521,8 @@
         "define-alias": {
             "match": "((?:export )?alias)\\s+([\\w\\-!]+)\\s*(=)",
             "captures": {
-                "1": { "name": "entity.name.function.nushell" },
-                "2": { "name": "entity.name.type.nushell" },
+                "1": { "name": "keyword.other.nushell" },
+                "2": { "name": "entity.name.function.nushell" },
                 "3": { 
                     "patterns": [
                         { "include": "#operators" }
