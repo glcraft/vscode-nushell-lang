@@ -184,7 +184,7 @@
         },
         "ranges": {
             "match": "\\.\\.<?|:",
-            "name": "keyword.control.nushell"
+            "name": "keyword.operator.nushell"
         },
         "operators-word": {
             "match": "(?<= |\\()(?:mod|in|not-in|not|and|or|xor|bit-or|bit-and|bit-xor|bit-shl|bit-shr|starts-with|ends-with)(?= |\\)|$)",
